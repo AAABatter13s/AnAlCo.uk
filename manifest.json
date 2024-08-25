@@ -1,0 +1,14 @@
+{
+  "name": "AnAlCo",
+  "short_name": "AnAlCo",
+  "description": "This is AnAlCo!",
+  "icons": [{
+    "src": "/icon.png",
+    "sizes": "1000x1000",
+    "type": "image/png"
+  }],
+  "start_url": "/index.html",
+  "background_color": "#171B24",
+  "display": "standalone",
+  "scope": "/"
+}

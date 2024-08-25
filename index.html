@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>AnAlCo</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<style>
+html { color-scheme: dark; }
+body { background-color: #171B24; }
+div{ 1px solid transparent;
+	border-radius: 8px;
+	margin: 0 auto;
+	max-width: 1122px;
+	min-width: 625px;
+text-align:center;
+background-color: #171B24;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #242A36;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;}
+
+ul li a:hover {
+  background-color: #111;}
+</style>
+</head>
+<body>
+<script>
+// Service worker registration
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+// HTTPS requirement
+if (window.location.protocol !== 'https:') {
+  window.location.replace(window.location.href.replace(/^http:/, 'https:'));
+}
+</script>
+<div>
+<a href="https://analco.uk/"><img width="50%" height="50%" src="banner.png"></img></a>
+<b><ul style="font-size:1.5em;">
+  <li><a href="/">Home</a></li>
+  <li><a href="/forum/index.php">Forum</a></li>
+  <li><a href="https://analco.store/">Store</a></li>
+  <li><a href="/blog/index.html">Blog</a></li>
+  <li><a href="/contact/index.html">Contact</a></li>
+</ul></b>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>I like webservers<br/>
+me to.</p>
+ <video width="95%" height="95%" controls>
+  <source src="angry cat.webm" type="video/webm">
+Your browser does not support the video tag.
+</video> 
+
+<p><em>Another happy landing!</em></p>
+</div>
+</body>
+</html>
+
